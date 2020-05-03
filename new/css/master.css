@@ -1,0 +1,99 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap');
+  
+* {
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+}
+body {
+    width: 100%;
+    height: 100vh;
+    overflow: hidden;
+    padding: 0;
+    margin: 0;
+    background-color: #fff;
+    font-family: 'Poppins', sans-serif;
+    font-size: 14px;
+    color: #323232;
+}
+a,span {
+    display: block;
+    text-decoration: none;
+    color: #323232;
+}
+
+.container {
+}
+.p__common {
+    width: 70%;
+    margin: 0 auto;
+    text-align: center;
+}
+.head {
+    position: fixed;
+    top:0;
+    width: 100%;
+    padding: 10px 2%;
+    display: flex;
+    justify-content: space-between;
+}
+.head__left p {
+    color: rgb(13, 13, 73);
+    position: relative;
+    padding: 2px 4px;
+}
+.head__left p::before,
+.head__left p::after {
+    content: '';
+    width: 30px;
+    height: 1px;
+    position: absolute;
+    background: #323232;
+    transition: all 1s;
+}
+.head__left p::before {
+    left: 0;
+    top: 0;
+}
+.head__left p::after {
+    right: 0;
+    bottom: 0;
+}
+
+.head__left p:hover:before ,
+.head__left p:hover:after {
+    width: 100%;
+}
+.menu {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    text-align: right;
+    font-weight: 300;
+}
+.menu li{
+    padding: 2px 0;
+    position: relative;
+    cursor: pointer;
+}
+.menu li::before {
+    content: '';
+    width: 5px;
+    height: 1px;
+    position: absolute;
+    background: #323232;
+    transition: all 1s;
+    bottom:50%;
+    right: -10px;
+}
+.menu li:hover {
+    font-weight: 400;
+}
+.menu li:hover:before {
+    width: 110%;
+}
+.p1__head{
+    padding: 10% 0;
+    font-size: 4em;
+    font-weight: 100;
+}
