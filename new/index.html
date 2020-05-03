@@ -7,20 +7,103 @@
   <meta name="author" content="Abhinandu V Nair">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <link href="css/master.css" rel="stylesheet" type="text/css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.2.6/gsap.min.js"></script>
+  <script>
+    $(document).ready(function () {
+      var cursor = $("#mouse"),follower = $("#mouse-bg");
+      var posX = 0,posY = 0;
+      var mouseX = 0,mouseY = 0;
+
+      TweenMax.to({}, 0.016, {
+        repeat: -1,
+        onRepeat: function () {
+          posX += (mouseX - posX) / 9;
+          posY += (mouseY - posY) / 9;
+
+          TweenMax.set(follower, {
+            css: {
+              left: posX - 12,
+              top: posY - 12
+            }
+          });
+
+          TweenMax.set(cursor, {
+            css: {
+              left: mouseX,
+              top: mouseY
+            }
+          });
+        }
+      });
+
+      $(document).on("mousemove", function (e) {
+        mouseX = e.clientX;
+        mouseY = e.clientY;
+      });
+      // yellow circle
+      $(".link").on("mouseenter", function () {
+        cursor.addClass("active");
+        follower.addClass("active");
+      });
+      $(".link").on("mouseleave", function () {
+        cursor.removeClass("active");
+        follower.removeClass("active");
+      });
+    });
+    var lFollowX = 0,
+      lFollowY = 0,
+      x = 0,
+      y = 0,
+      friction = 1 / 30;
+
+    function moveBackground() {
+      x += (lFollowX - x) * friction;
+      y += (lFollowY - y) * friction;
+
+      translate = 'translate(' + x + 'px, ' + y + 'px) scale(1.1)';
+
+      $('.p1').css({
+        '-webit-transform': translate,
+        '-moz-transform': translate,
+        'transform': translate
+      });
+
+      window.requestAnimationFrame(moveBackground);
+    }
+
+    $(window).on('mousemove click', function (e) {
+
+      var lMouseX = Math.max(-100, Math.min(100, $(window).width() / 2 - e.clientX));
+      var lMouseY = Math.max(-100, Math.min(100, $(window).height() / 2 - e.clientY));
+      lFollowX = (20 * lMouseX) / 100; // 100 : 12 = lMouxeX : lFollow
+      lFollowY = (10 * lMouseY) / 100;
+
+    });
+
+    moveBackground();
+
+
+
+
+
+  </script>
 </head>
 
 <body>
+  <div class="pointer" id="mouse"></div>
+  <div class="pointer" id="mouse-bg"></div>
   <div class="container">
     <nav class="head">
       <div class="head__left">
-        <p><a href="http://abhinandun.github.io/">Abhinandu V Nair</a></p>
+        <p class="link"><a href="http://abhinandun.github.io/">Abhinandu V Nair</a></p>
       </div>
       <div class="head__right">
         <ul class="menu">
-          <li><a href="#">Home</a></li>
-          <li><a href="#">About Me</a></li>
-          <li><a href="#">Works</a></li>
-          <li><a href="#">Contact</a></li>
+          <li class="link"><a href="#">Home</a></li>
+          <li class="link"><a href="#">About Me</a></li>
+          <li class="link"><a href="#">Works</a></li>
+          <li class="link"><a href="#">Contact</a></li>
         </ul>
       </div>
     </nav>
