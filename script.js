@@ -42,7 +42,7 @@ const sendMessage = () => {
   let data = $("#cForm").serialize();
   console.log(data);
 
-  const url = "";
+  const url = "https://abhndv.herokuapp.com";
 
   $.ajax({
     type: "POST",
