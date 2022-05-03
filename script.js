@@ -1,9 +1,12 @@
-function showComingSoon() {
-  var x = document.getElementById("comingSoon");
-  x.className = "show";
-  setTimeout(function () {
-    x.className = x.className.replace("show", "");
-  }, 3000);
+function showMessage(msg) {
+  if (msg) {
+    var x = document.getElementById("showMessage");
+    x.className = "show";
+    x.innerText = msg;
+    setTimeout(function () {
+      x.className = x.className.replace("show", "");
+    }, 3000);
+  }
 }
 
 $(() => {
@@ -18,7 +21,6 @@ $(() => {
       if (btn.prop("checked")) nav.addClass("menu-popup");
       else nav.removeClass("menu-popup");
     }
-    console.log(el);
   });
 
   $("#cForm").trigger("reset");
@@ -40,7 +42,6 @@ const showScrollProgress = (maxScroll) => {
 
 const sendMessage = () => {
   let data = $("#cForm").serialize();
-  console.log(data);
 
   const url = "https://abhndv.herokuapp.com";
 
@@ -49,11 +50,13 @@ const sendMessage = () => {
     url: url + "/send",
     data: data,
     success: function (data) {
-      console.log(data);
+      showMessage("Message sent!!");
+      $("#cForm").trigger("reset");
     },
     error: function (err) {
       let obj = err?.responseJSON;
       console.log(obj);
+      showMessage("Error sending message");
     },
   });
 };
