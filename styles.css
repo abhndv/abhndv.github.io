@@ -209,7 +209,6 @@ section {
   transform-origin: 80% 50%;
 }
 
-
 .hero {
   position: relative;
   display: flex;
@@ -562,11 +561,15 @@ y {
 }
 
 o {
-  color: #ff641c;
+  color: #ff8842;
 }
 
 c {
   color: #01b6f3;
+}
+
+p1 {
+  color: #d695ff;
 }
 
 /*************** MEDIA QUERIES ***************/
