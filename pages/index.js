@@ -13,7 +13,7 @@ export default function Home() {
       <main className={styles.main}>
         <h1 className={styles.title}>Hi 👋,</h1>
         <h1 className={styles.title}>
-          I'm <a href="https://abhndv.github.io/">Abhinandu V Nair!</a>
+          I&apos;m <a href="https://abhndv.github.io/">Abhinandu V Nair!</a>
         </h1>
 
         <p className={styles.description}>
@@ -28,7 +28,7 @@ export default function Home() {
           target="_blank"
           rel="noopener noreferrer"
         >
-          Made with <a href="">NextJS</a>
+          Made with <a href="https://nextjs.org/">NextJS</a>
         </a>
       </footer>
     </div>
