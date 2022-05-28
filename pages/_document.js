@@ -5,8 +5,9 @@ export default function Document() {
     <Html>
       <Head>
         <link rel="icon" href="/favicon.ico" />
+        <link rel="stylesheet" href="https://rsms.me/inter/inter.css" />
       </Head>
-      <body className="bg-white h-screen dark:bg-gray-800 dark:text-white">
+      <body className="h-screen bg-white text-slate-800 dark:bg-slate-900 dark:text-white">
         <Main />
         <NextScript />
       </body>

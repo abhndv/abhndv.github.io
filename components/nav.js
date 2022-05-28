@@ -5,7 +5,6 @@ export default function Menu() {
     <nav className="flex sm:justify-center space-x-4">
       {[
         ["Home", "/"],
-        ["About", "/about"],
         ["Projects", "/projects"],
         ["Contact", "/contact"],
       ].map(([title, url]) => (

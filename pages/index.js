@@ -2,6 +2,10 @@ import Head from "next/head";
 import Header from "../components/header";
 import Container from "../components/container";
 import Footer from "../components/footer";
+import Section from "../components/section";
+import ShortAbout from "../components/home/about";
+import ShortProjects from "../components/home/projects";
+import SocialMedia from "../components/social-media";
 
 export default function Home() {
   return (
@@ -13,23 +17,40 @@ export default function Home() {
       </Head>
       <Container>
         <Header />
-        <main className="mt-48 ">
+
+        {/* Landing Page Section */}
+        <Section>
           <h1 className="text-3xl">Hi 👋,</h1>
           <h1 className="text-6xl font-bold my-6">
             I&apos;m{" "}
-            <a className="" href="https://abhndv.github.io/">
-              Abhinandu V Nair!
+            <a
+              className="text-indigo-600 dark:text-rose-400"
+              href="https://abhndv.github.io/"
+            >
+              Abhinandu!
             </a>
           </h1>
 
-          <p className="text-2xl leading-relaxed">
+          <p className="text-xl leading-relaxed max-w-[60%]">
             A passionate&nbsp;
-            <code className="font-mono text-xl bg-gray-100 p-1 dark:bg-gray-700">
+            <code className="font-mono text-lg rounded bg-gray-100 p-1 dark:bg-gray-700">
               designer/developer
             </code>
-            &nbsp; who has experience in creating both web and mobile.
+            &nbsp; who loves to build solutions for both web and mobile. I
+            occasionally design and improve experiences of applications. Haven't
+            realised yet what suits me better Front End or Back End, so I build
+            both.
           </p>
-        </main>
+          <div className="my-6">
+            <SocialMedia />
+          </div>
+        </Section>
+
+        {/* About Me */}
+        <ShortAbout />
+
+        {/* Projects */}
+        <ShortProjects />
 
         <Footer />
       </Container>

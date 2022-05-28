@@ -3,10 +3,8 @@ import { useTheme } from "next-themes";
 export default function Footer(props) {
   const { theme, setTheme } = useTheme();
 
-  const iconClass = theme === "dark" ? "hidden" : "";
-
   return (
-    <div className="container fixed bottom-8 mx-auto max-w-[80%] pt-6 flex items-center justify-between">
+    <div className="container py-8 flex items-center justify-between">
       <p className="">Made with NextJS and Tailwind</p>
       <button
         id="theme-toggle"
