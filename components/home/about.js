@@ -15,7 +15,8 @@ export default function ShortAbout(props) {
         <a
           href="https://goo.gl/maps/NrARwXrGsaCPKrYH7"
           className="decoration-dotted underline text-blue-700 dark:text-sky-400"
-          target="_blank"
+          target={"_blank"}
+          rel={"noreferrer"}
         >
           Kochi, Kerala
         </a>
@@ -24,7 +25,8 @@ export default function ShortAbout(props) {
         <a
           href="https://www.techneurons.com/"
           className="decoration-dotted underline text-blue-700 dark:text-sky-400"
-          target="_blank"
+          target={"_blank"}
+          rel={"noreferrer"}
         >
           TechNeurons
         </a>

@@ -5,12 +5,7 @@ export default function SocialMedia(props) {
     <ul className="flex items-center gap-8">
       {socialMediaData.map(([key, href, title, icon]) => (
         <li key={key}>
-          <a
-            target="_blank"
-            rel="noopener noreferrer"
-            href={href}
-            title={title}
-          >
+          <a target={"_blank"} rel={"noreferrer"} href={href} title={title}>
             {icon}
           </a>
         </li>
