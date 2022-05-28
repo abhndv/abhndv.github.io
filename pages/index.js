@@ -20,26 +20,19 @@ export default function Home() {
 
         {/* Landing Page Section */}
         <Section>
-          <h1 className="text-3xl">Hi 👋,</h1>
-          <h1 className="text-6xl font-bold my-6">
-            I&apos;m{" "}
-            <a
-              className="text-indigo-600 dark:text-rose-400"
-              href="https://abhndv.github.io/"
-            >
-              Abhinandu!
-            </a>
+          <h1 className="text-xl md:text-3xl">Hi 👋,</h1>
+          <h1 className="text-3xl md:text-6xl font-bold my-6">
+            I&apos;m&nbsp;
+            <a className="text-indigo-600 dark:text-rose-400">Abhinandu!</a>
           </h1>
 
-          <p className="text-xl leading-relaxed max-w-[60%]">
+          <p className="text-sm md:text-xl leading-relaxed max-w-[100%] sm:max-w-[90%] xl:max-w-[80%] 2xl:max-w-[60%]">
             A passionate&nbsp;
-            <code className="font-mono text-lg rounded bg-gray-100 p-1 dark:bg-gray-700">
+            <code className="font-mono text-md md:text-lg rounded bg-gray-100 p-1 dark:bg-gray-700">
               designer/developer
             </code>
             &nbsp; who loves to build solutions for both web and mobile. I
-            occasionally design and improve experiences of applications. Haven't
-            realised yet what suits me better Front End or Back End, so I build
-            both.
+            occasionally designs and work on user experience.
           </p>
           <div className="my-6">
             <SocialMedia />

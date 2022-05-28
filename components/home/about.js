@@ -2,14 +2,14 @@ import Section from "../section";
 
 export default function ShortAbout(props) {
   return (
-    <Section className="leading-8">
+    <Section className="leading-8 text-sm md:text-md">
       <a
         id="about"
-        className="font-semibold text-indigo-600 dark:text-rose-400"
+        className="text-lg font-bold text-indigo-600 dark:text-rose-400"
       >
         About me
       </a>
-      <p>
+      <p className="">
         Holla! I&apos;m Abhinandu V Nair, a Computer Science Engineering
         graduate based on&nbsp;
         <a

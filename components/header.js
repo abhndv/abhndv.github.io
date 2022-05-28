@@ -1,9 +1,19 @@
+import Link from "next/link";
 import Menu from "./nav";
+import { mediaWidth, bgLightDark } from "../data/common-classes";
 
 export default function Header() {
   return (
-    <header className="flex align-center justify-between fixed top-0 left-0 right-0 mx-auto w-[70%] py-8 bg-white text-slate-800 dark:bg-slate-900 dark:text-white">
-      <h1 className="text-xl font-semibold ">Abhinandu</h1>
+    <header
+      className={
+        "flex items-center justify-between fixed top-0 left-0 right-0 mx-auto py-6 md:py-8" +
+        mediaWidth +
+        bgLightDark
+      }
+    >
+      <Link href={"/"}>
+        <h1 className="cursor-pointer text-lg md:text-xl font-bold ">Abhinandu</h1>
+      </Link>
       <Menu></Menu>
     </header>
   );
