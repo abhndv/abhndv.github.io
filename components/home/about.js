@@ -1,14 +1,10 @@
 import Section from "../section";
+import SectionTitle from "../title";
 
 export default function ShortAbout(props) {
   return (
     <Section className="leading-8 text-sm md:text-md">
-      <a
-        id="about"
-        className="text-lg font-bold text-indigo-600 dark:text-rose-400"
-      >
-        About me
-      </a>
+      <SectionTitle title="About me" />
       <p className="">
         Holla! I&apos;m Abhinandu V Nair, a Computer Science Engineering
         graduate based on&nbsp;
@@ -45,6 +41,12 @@ export default function ShortAbout(props) {
         time(We occasionally meet up though). Somewhere in the middle fell in
         love with Tailwind. For the past few months the focus was on making the
         products more useful and easier for the end users.
+      </p>
+      <br />
+      <p>
+        Technical talks aside, I ❤️ football and a HUGE Real Madrid fan. I often
+        binges shows and movies. My fav shows are Suits, Magicians and above all
+        FRIENDS!
       </p>
     </Section>
   );

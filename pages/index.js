@@ -19,7 +19,7 @@ export default function Home() {
         <Header />
 
         {/* Landing Page Section */}
-        <Section>
+        <Section className="h-screen my-0">
           <h1 className="text-xl md:text-3xl">Hi 👋,</h1>
           <h1 className="text-3xl md:text-6xl font-bold my-6">
             I&apos;m&nbsp;

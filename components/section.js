@@ -2,7 +2,7 @@ export default function Section(props) {
   return (
     <main
       className={
-        "container h-screen mx-auto w-full py-8 flex items-center " +
+        "container mx-auto w-full py-24 flex items-center " +
         (props.className || "")
       }
     >
