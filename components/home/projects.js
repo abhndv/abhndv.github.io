@@ -35,7 +35,7 @@ export default function ShortProjects(props) {
               </p>
               <div className="flex gap-4 text-sm">
                 {tech.map((nm) => (
-                  <span className="text-indigo-600 dark:text-rose-400">{nm}</span>
+                  <span key={nm} className="text-indigo-600 dark:text-rose-400">{nm}</span>
                 ))}
               </div>
               {/* <a
