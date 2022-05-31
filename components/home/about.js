@@ -3,24 +3,24 @@ import SectionTitle from "../title";
 
 export default function ShortAbout(props) {
   return (
-    <Section className="leading-8 text-sm md:text-md">
+    <Section className="leading-8 text-sm md:text-lg md:leading-10" id="about">
       <SectionTitle title="About me" />
       <p className="">
         Holla! I&apos;m Abhinandu V Nair, a Computer Science Engineering
-        graduate based on&nbsp;
+        graduate based on 🌍 &nbsp;
         <a
           href="https://goo.gl/maps/NrARwXrGsaCPKrYH7"
-          className="decoration-dotted underline text-blue-700 dark:text-sky-400"
+          className="decoration-dotted underline "
           target={"_blank"}
           rel={"noreferrer"}
         >
           Kochi, Kerala
         </a>
         . Currently working on&nbsp;
-        <b>User Experience</b> at&nbsp;
+        <b>User Experience</b> at 🏢 &nbsp;
         <a
           href="https://www.techneurons.com/"
-          className="decoration-dotted underline text-blue-700 dark:text-sky-400"
+          className="decoration-dotted underline "
           target={"_blank"}
           rel={"noreferrer"}
         >
@@ -44,8 +44,8 @@ export default function ShortAbout(props) {
       </p>
       <br />
       <p>
-        Technical talks aside, I ❤️ football and a HUGE Real Madrid fan. I often
-        binges shows and movies. My fav shows are Suits, Magicians and above all
+        Technical talks aside, I ❤️ ⚽ and am a HUGE Real Madrid fan. I often
+        binges shows and movies. My fav 🎬 are Suits, Magicians and above all
         FRIENDS!
       </p>
     </Section>

@@ -1,4 +1,4 @@
-import socialMediaData from "../data/social-media";
+import { socialMediaData } from "../data/social-media";
 
 export default function SocialMedia(props) {
   return (

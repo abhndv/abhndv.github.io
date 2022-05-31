@@ -1,6 +1,8 @@
 const className =
   "transition-all hover:fill-indigo-600 dark:fill-white dark:hover:fill-rose-400";
 
+const email = "abhndv@gmail.com";
+
 const socialMediaData = [
   [
     "github",
@@ -75,4 +77,4 @@ const socialMediaData = [
   ],
 ];
 
-export default socialMediaData;
+module.exports = { socialMediaData, email };

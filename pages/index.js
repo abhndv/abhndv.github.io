@@ -6,8 +6,23 @@ import Section from "../components/section";
 import ShortAbout from "../components/home/about";
 import ShortProjects from "../components/home/projects";
 import SocialMedia from "../components/social-media";
+import { useTheme } from "next-themes";
+import React, { useState, useEffect } from "react";
+import ShortContact from "../components/home/contact";
 
 export default function Home() {
+  const { theme, setTheme } = useTheme();
+  const [itemColor, setItemColor] = useState("e5dfff");
+
+  useEffect(() => {
+    setItemColor(theme === "light" ? "4f46e5" : "f1f5f9");
+  }, [theme]);
+
+  const divStyle = {
+    // backgroundColor: "#ffffff",
+    backgroundImage: `url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='36' height='72' viewBox='0 0 36 72'%3E%3Cg fill-rule='evenodd'%3E%3Cg fill='%23${itemColor}' fill-opacity='0.15'%3E%3Cpath d='M2 6h12L8 18 2 6zm18 36h12l-6 12-6-12z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E")`,
+  };
+
   return (
     <div className="">
       <Head>
@@ -19,7 +34,7 @@ export default function Home() {
         <Header />
 
         {/* Landing Page Section */}
-        <Section className="h-screen my-0">
+        <Section className="h-screen my-0 relative">
           <h1 className="text-xl md:text-3xl">Hi 👋,</h1>
           <h1 className="text-3xl md:text-6xl font-bold my-6">
             I&apos;m&nbsp;
@@ -37,6 +52,10 @@ export default function Home() {
           <div className="my-6">
             <SocialMedia />
           </div>
+          <div
+            className="w-[50%] h-[40%] absolute bottom-[20%] right-0  transform-gpu"
+            style={divStyle}
+          ></div>
         </Section>
 
         {/* About Me */}
@@ -44,6 +63,9 @@ export default function Home() {
 
         {/* Projects */}
         <ShortProjects />
+
+        {/* Contact */}
+        <ShortContact />
 
         <Footer />
       </Container>
