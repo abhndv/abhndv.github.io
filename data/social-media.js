@@ -1,7 +1,8 @@
 const className =
   "transition-all hover:fill-indigo-600 dark:fill-white dark:hover:fill-rose-400";
 
-const email = "abhndv@gmail.com";
+const contactMail = "abhndv@gmail.com";
+const serverURL = "https://abhndv.herokuapp.com";
 
 const socialMediaData = [
   [
@@ -77,4 +78,4 @@ const socialMediaData = [
   ],
 ];
 
-module.exports = { socialMediaData, email };
+module.exports = { socialMediaData, contactMail, serverURL };

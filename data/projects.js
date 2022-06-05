@@ -16,6 +16,7 @@ const projectData = [
     "A dark theme for VS Code inspired from a colorhunt palette",
     "/editor.png",
     ["VSCode", "VS Theme"],
+    "https://github.com/abhndv/necer-vscode",
   ],
 ];
 module.exports = { projectData };
