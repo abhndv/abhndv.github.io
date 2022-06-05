@@ -2,21 +2,20 @@ import Section from "../section";
 import SectionTitle from "../title";
 import { contactMail, serverURL } from "../../data/social-media";
 import { useState, useEffect } from "react";
+import toast, { Toaster } from "react-hot-toast";
 
 export default function ShortContact(props) {
   const [name, setName] = useState("");
   const [email, setEmail] = useState("");
   const [subject, setSubject] = useState("");
   const [message, setMessage] = useState("");
-  const [isSent, setIsSent] = useState(false);
-  const [valid, setValid] = useState(true);
 
   const inputClass =
     "text-base leading-none text-gray-900 p-3 focus:oultine-none focus:border-indigo-600 mt-4 bg-gray-100 border rounded border-gray-200 placeholder-gray-100";
 
   useEffect(() => {
     if (!!name && !!email && !!subject && !!message) {
-      setValid(true);
+      toast.dismiss();
     }
   }, [name, email, subject, message]);
 
@@ -24,22 +23,37 @@ export default function ShortContact(props) {
     e.preventDefault();
 
     if (!!name && !!email && !!subject && !!message) {
+      const loadToast = toast.loading("Sending...");
       fetch(`${serverURL}/send`, {
         method: "POST",
         body: JSON.stringify({ name, email, subject, message }),
       })
         .then((response) => response.json())
         .then((data) => {
-          console.log("Success:", data);
+          toast.dismiss(loadToast);
+          toast.success("Message sent..");
+          clearForm();
         })
         .catch((error) => {
+          toast.dismiss(loadToast);
+          toast.error("Error sending message!!");
           console.error("Error:", error);
         });
-    } else setValid(false);
+    } else {
+      toast.error("Fill up all the fields..");
+    }
   };
-
+  const clearForm = () => {
+    setName("");
+    setEmail("");
+    setMessage("");
+    setSubject("");
+  };
   return (
-    <Section className="leading-8 text-sm md:text-lg md:leading-10" id="contact">
+    <Section
+      className="leading-8 text-sm md:text-lg md:leading-10"
+      id="contact"
+    >
       <SectionTitle title="Contact" />
 
       <p>
@@ -111,21 +125,31 @@ export default function ShortContact(props) {
             SUBMIT
           </button>
         </div>
-        {!valid ? (
-          <div
-            id="formError"
-            className="bg-red-100 border border-red-400 text-red-700 px-4 py-3 rounded relative mt-6"
-            role="alert"
-          >
-            <strong className="font-bold">Invalid Data! </strong>
-            <span className="block sm:inline">
-              Fill up all the fields to send message
-            </span>
-          </div>
-        ) : (
-          <></>
-        )}
       </form>
+      <Toaster
+        position="bottom-right"
+        reverseOrder={false}
+        gutter={8}
+        containerClassName=""
+        containerStyle={{}}
+        toastOptions={{
+          // Define default options
+          className: "",
+          duration: 5000,
+          style: {
+            background: "#363636",
+            color: "#fff",
+          },
+          // Default options for specific types
+          success: {
+            duration: 3000,
+            theme: {
+              primary: "green",
+              secondary: "black",
+            },
+          },
+        }}
+      />
     </Section>
   );
 }
