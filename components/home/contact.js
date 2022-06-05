@@ -39,7 +39,7 @@ export default function ShortContact(props) {
   };
 
   return (
-    <Section className="leading-8 text-sm md:text-lg md:leading-10" id="about">
+    <Section className="leading-8 text-sm md:text-lg md:leading-10" id="contact">
       <SectionTitle title="Contact" />
 
       <p>

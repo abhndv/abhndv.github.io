@@ -33,7 +33,7 @@ export default function ShortProjects(props) {
                   <a
                     target={"_blank"}
                     href={link}
-                    className="p-2 rounded bg-slate-100"
+                    className="p-2 rounded bg-slate-100 dark:bg-slate-800"
                   >
                     <FaGithub />
                   </a>

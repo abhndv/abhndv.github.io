@@ -7,8 +7,8 @@ export default function Menu() {
     <nav className="flex items-center sm:justify-center space-x-2 md:space-x-4 text-sm">
       {[
         // ["Home", "/"],
-        ["Projects", "/projects"],
-        ["Contact", "/contact"],
+        ["Projects", "/#projects"],
+        ["Contact", "/#contact"],
       ].map(([title, url]) => (
         <Link href={url} key={url}>
           <a className="rounded-lg px-2 md:px-3 py-2 text-slate-700 font-medium hover:bg-slate-100 hover:text-slate-900 dark:text-white dark:hover:bg-slate-700">
