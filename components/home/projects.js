@@ -32,6 +32,7 @@ export default function ShortProjects(props) {
                 {link ? (
                   <a
                     target={"_blank"}
+                    rel={"noreferrer"}
                     href={link}
                     className="p-2 rounded bg-slate-100 dark:bg-slate-800"
                   >
