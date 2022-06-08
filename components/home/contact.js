@@ -26,6 +26,7 @@ export default function ShortContact(props) {
       const loadToast = toast.loading("Sending...");
       fetch(`${serverURL}/send`, {
         method: "POST",
+        headers: { "Content-Type": "application/json" },
         body: JSON.stringify({ name, email, subject, message }),
       })
         .then((response) => response.json())
