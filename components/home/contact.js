@@ -11,7 +11,7 @@ export default function ShortContact(props) {
   const [message, setMessage] = useState("");
 
   const inputClass =
-    "text-base leading-none text-gray-900 p-3 focus:oultine-none focus:border-indigo-600 mt-4 bg-gray-100 border rounded border-gray-200 placeholder-gray-100";
+    "text-base leading-none text-gray-900 p-3 focus:oultine-none focus:border-indigo-600 mt-4 bg-gray-100 border rounded border-gray-200  dark:border-slate-700 dark:bg-slate-800 dark:text-white placeholder-gray-100";
 
   useEffect(() => {
     if (!!name && !!email && !!subject && !!message) {
@@ -117,7 +117,7 @@ export default function ShortContact(props) {
             role="textbox"
             value={message}
             onChange={(e) => setMessage(e.target.value)}
-            className="h-36 text-base leading-none text-gray-900 p-3 focus:oultine-none focus:border-indigo-700 mt-4 bg-gray-100 border rounded border-gray-200 placeholder-gray-100 resize-none"
+            className="h-36 text-base leading-none text-gray-900 p-3 focus:oultine-none focus:border-indigo-700 mt-4 bg-gray-100 border-gray-200 dark:border-slate-700 dark:bg-slate-800 border rounded  dark:text-white placeholder-gray-100 resize-none"
           ></textarea>
         </div>
         <div className="flex items-center justify-center w-full">

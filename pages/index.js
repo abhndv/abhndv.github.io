@@ -35,7 +35,7 @@ export default function Home() {
 
         {/* Landing Page Section */}
         <Section className="h-screen my-0 relative">
-          <h1 className="text-xl md:text-3xl">Hi 👋,</h1>
+          <h1 id="hero-hi" className="text-xl md:text-3xl">Hi 👋,</h1>
           <h1 className="text-3xl md:text-6xl font-bold my-6">
             I&apos;m&nbsp;
             <a className="text-indigo-600 dark:text-rose-400">Abhinandu!</a>
@@ -53,6 +53,7 @@ export default function Home() {
             <SocialMedia />
           </div>
           <div
+            id="hero-image"
             className="w-[50%] h-[40%] absolute bottom-[20%] right-0  transform-gpu"
             style={divStyle}
           ></div>
