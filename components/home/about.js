@@ -16,15 +16,15 @@ export default function ShortAbout(props) {
         >
           Kochi, Kerala
         </a>
-        . Currently working on&nbsp;
-        <b>User Experience</b> at 🏢 &nbsp;
+        . Currently working as&nbsp;
+        <b>Senior Software Engineer</b> at 🏢 &nbsp;
         <a
-          href="https://www.techneurons.com/"
+          href="https://www.msystechnologies.com/"
           className="decoration-dotted underline "
           target={"_blank"}
           rel={"noreferrer"}
         >
-          TechNeurons
+          MSys Technologies
         </a>
         .
       </p>
